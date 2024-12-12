@@ -12,7 +12,7 @@ public class SpitState : State
         Debug.Log("Spit State Entered");
         
         // instanciar proyectil
-        
+        Boss.ShootSpit();
         // siguiente estado
         Boss.ChangeStateKey(States.Recovery);
     }

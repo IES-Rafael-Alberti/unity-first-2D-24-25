@@ -6,9 +6,11 @@ public class BossController : MonoBehaviour
 {
     [SerializeField] private GameObject ToxicArea;
     [SerializeField] private PlayerController Player;
-
+    [SerializeField] private float maxHealth = 200;
+    
+    [SerializeField] private GameObject SpitPrefab;
+    
     public float currentHealth;
-    private float maxHealth = 200;
     
     State currentState;
     Dictionary<States, State> statesDict = new Dictionary<States, State>();
@@ -62,7 +64,13 @@ public class BossController : MonoBehaviour
         currentState.Exit();
         currentState = newState;
         currentState.Entry();
-    }    
+    }
+
+    public void ShootSpit()
+    {
+        GameObject instSpit = Instantiate(SpitPrefab, transform.position + new Vector3(1,1,0), Quaternion.identity);
+        instSpit.GetComponent<Rigidbody2D>().AddForce((Vector2.up+Vector2.left) * 3f, ForceMode2D.Impulse);
+    }
 }
 
 public enum States
