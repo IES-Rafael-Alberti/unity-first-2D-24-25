@@ -10,5 +10,18 @@ public class RageState : State
     {
         base.Entry();
         Debug.Log("Rage State Entered");
+        Boss.RageUp();
+        Boss.StartCoroutine(Burp());
+    }
+
+    public override void Exit() {
+        base.Exit();
+        Boss.RageDown();
+    }
+
+    IEnumerator Burp()
+    {
+        yield return new WaitForSeconds(5f);
+        Boss.ChangeStateKey(States.Burp);
     }
 }

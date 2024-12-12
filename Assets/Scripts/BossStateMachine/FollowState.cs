@@ -9,8 +9,8 @@ public class FollowState : State
     public override void Entry()
     {
         base.Entry();
-        Boss.StartCoroutine(Spit());
         Debug.Log("Follow State Entered");
+        Boss.StartCoroutine(Spit());
     }
 
     public override void Update()

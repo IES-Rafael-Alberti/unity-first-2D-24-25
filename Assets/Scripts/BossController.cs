@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
-    [SerializeField] private GameObject ToxicArea;
+    [SerializeField] private GameObject SpikesPrefab;
+    [SerializeField] private GameObject SpitPrefab;
+    [SerializeField] private GameObject RageCloud;
+
     [SerializeField] private PlayerController Player;
     [SerializeField] private float maxHealth = 200;
     
-    [SerializeField] private GameObject SpitPrefab;
     
     public float currentHealth;
     
@@ -70,6 +72,17 @@ public class BossController : MonoBehaviour
     {
         GameObject instSpit = Instantiate(SpitPrefab, transform.position + new Vector3(1,1,0), Quaternion.identity);
         instSpit.GetComponent<Rigidbody2D>().AddForce((Vector2.up+Vector2.left) * 3f, ForceMode2D.Impulse);
+    }
+
+    public void Burp() {
+        GameObject instSpikes = Instantiate(SpikesPrefab, new Vector3(Player.transform.position.x, -1.77f, 0), Quaternion.identity);
+    }
+
+    public void RageUp() {
+        RageCloud.SetActive(true);
+    }
+    public void RageDown() {
+        RageCloud.SetActive(false);
     }
 }
 

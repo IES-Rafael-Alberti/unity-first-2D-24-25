@@ -10,7 +10,8 @@ public class BurpState : State
     {
         base.Entry();
         Debug.Log("Burp State Entered");
-        // activar animación follow
+        // instanciar spike
+        Boss.Burp();
     }
 
     public override void Exit()
@@ -21,5 +22,6 @@ public class BurpState : State
     public override void Update()
     {
         // buscar jugador y seguir
+        Boss.ChangeStateKey(States.Rage);
     }
 }

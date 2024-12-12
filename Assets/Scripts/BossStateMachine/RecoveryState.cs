@@ -15,7 +15,7 @@ public class RecoveryState : State
     
     IEnumerator RecoveryWait()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         if(Boss.GetHealthPercentage() < 0.5f)
             Boss.ChangeStateKey(States.Rage);
         else 
