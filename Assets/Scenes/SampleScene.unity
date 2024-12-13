@@ -11966,6 +11966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Death
       objectReference: {fileID: 0}
+    - target: {fileID: 4227307048293196948, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 4327783389570705571, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
       propertyPath: m_IsTrigger
       value: 1

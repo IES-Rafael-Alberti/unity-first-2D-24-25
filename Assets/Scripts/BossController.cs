@@ -70,8 +70,10 @@ public class BossController : MonoBehaviour
 
     public void ShootSpit()
     {
-        GameObject instSpit = Instantiate(SpitPrefab, transform.position + new Vector3(1,1,0), Quaternion.identity);
-        instSpit.GetComponent<Rigidbody2D>().AddForce((Vector2.up+Vector2.left) * 3f, ForceMode2D.Impulse);
+        float speed = 0.8f * (transform.position.x - Player.transform.position.x);
+        GameObject instSpit = Instantiate(SpitPrefab, transform.position + new Vector3(-1,1,0), Quaternion.identity);
+        
+        instSpit.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 3.0f + Vector2.left * speed, ForceMode2D.Impulse);
     }
 
     public void Burp() {
