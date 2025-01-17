@@ -64,6 +64,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShapeTexture:
+        m_Texture: {fileID: 2800000, guid: f9cb087326140894c8666101a3fe94e2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -78,17 +82,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_21A90898: 0
-    - Vector1_6E5AA9CB: 1
-    - Vector1_EDD429AC: 1
+    - Vector1_21A90898: 2
+    - Vector1_6E5AA9CB: 2
+    - Vector1_EDD429AC: 5
     - _EnableExternalAlpha: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
     - Vector2_230FF287: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_3BF8CC3C: {r: 0, g: 0, b: 0, a: 0}
-    - Vector2_3F991457: {r: 0.2, g: 0.2, b: 0, a: 0}
-    - Vector2_402BFE03: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_3F991457: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - Vector2_402BFE03: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
