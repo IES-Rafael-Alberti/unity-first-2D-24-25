@@ -28,7 +28,7 @@ public class State : IState
     {
         // calcular distancia al jugador
         // reducir vida
-        Boss.currentHealth -= 0.1f;
+        Boss.currentHealth -= 10.0f * Time.deltaTime;
         // dejar que cada estado lo cambie
 
     }
